@@ -1,8 +1,8 @@
 import './App.css';
-import StateHook from './components/UseStateHookExample'
-import ClassComponentWithState from './components/ClassComponentWithStateExample';
-import UseEffectExample from './components/UseEffectExample';
-import UseRefExample from './components/UseRefExample';
+import StateHook from './components/UseState/UseStateHookExample'
+import ClassComponentWithState from './components/ClassComponent/ClassComponentWithStateExample';
+import UseEffectExample from './components/UseEffect/UseEffectExample';
+import UseRefExample from './components/UseRef/UseRefExample';
 
 function App() {
   return (
