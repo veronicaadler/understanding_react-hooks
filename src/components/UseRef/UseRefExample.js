@@ -23,7 +23,10 @@ const UseRefExample = () => {
                 })}
             >Increment
             </button>
-            <button onClick={() => setCounter(prevState => prevState - 1)}>Decrement</button>
+            <button onClick={() => setCounter(prevState => {
+                    prevCount.current = prevState;
+                    return prevState - 1
+                })}>Decrement</button>
         </div>
       );
 }
