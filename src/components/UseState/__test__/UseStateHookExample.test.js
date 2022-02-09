@@ -5,9 +5,9 @@ describe('UseStateHookExample', () => {
     //testing that the UI renders as it should initially.
     it('should render a heading with the correct text', () => {
         render(<StateHook />);
-        const headingElement = screen.getByRole(getByRole('heading', 
-        { name: /this is an example of a react state hook within a functional, stateless component\./i }
-        ))
+        const headingElement = screen.getByRole('heading', 
+        { name: /this is an example of a react state hook within a functional, stateless component/i }
+        )
         expect(headingElement.toBeInTheDocument)
     })
     it('should render a counter with an initial text of 0', () => {

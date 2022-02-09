@@ -8,7 +8,7 @@ export const handlers = [
                 mockDrinkObj
             ])
         )
-    })
+    }),
 ]
 
 //Here we are mocking HTTP methods.
