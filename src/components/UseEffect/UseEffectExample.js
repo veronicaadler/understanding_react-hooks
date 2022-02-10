@@ -8,14 +8,20 @@ const UseEffectExample = () => {
     const [error, setError] = useState(false);
 
     useEffect(() => {
+        const abortFetch = new AbortController();
         fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
         .then(res => res.json())
         .then(data => {
             setDrink(data.drinks[0].strDrink)
             setThumbnail(data.drinks[0].strDrinkThumb)})
         .catch(err => {
-            setError(true)
+            if (err.name === 'AbortError') {
+                console.log('fetch aborted')
+            } else {
+                setError(true)
+            }
         })
+        return () => abortFetch.abort()
     }, [])
 
     if (error) {

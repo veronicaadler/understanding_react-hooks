@@ -1,7 +1,6 @@
 import StateHook from '../UseStateHookExample';
 import { render, screen, fireEvent } from '@testing-library/react';
 
-describe('UseStateHookExample', () => {
     //testing that the UI renders as it should initially.
     it('should render a heading with the correct text', () => {
         render(<StateHook />);
@@ -41,4 +40,3 @@ describe('UseStateHookExample', () => {
         const counterElement = screen.getByTestId('count')
         expect(counterElement.textContent).toBe("Count: -1")
     })
-})

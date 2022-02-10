@@ -7,7 +7,6 @@ const UseRefExample = () => {
     const prevCount = useRef(0); //returns a mutable object with a current property holding the current value.
     //updating the value of useRef will not cause the component to re-render.  This is the main difference
     //between a value held in useRef and one stored in useState. 
-    console.log(prevCount) 
 
     const [ counter, setCounter ] = useState(0);
     
